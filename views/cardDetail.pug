@@ -1,0 +1,14 @@
+extends layout/main_layout.pug
+
+
+block content 
+    .row.w-50.text-center 
+        .col-md-4 
+            img(src=`/img/${card.image}` alt=`${card.sentence}`).img-fluid
+
+
+        .col-md-4
+            p  #{card.word}
+            hr
+            p mean: #{card.mean}
+            button(type="submit").btn.btn-primary.btn-lg Add to Card

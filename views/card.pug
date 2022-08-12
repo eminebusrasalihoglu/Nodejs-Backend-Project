@@ -1,0 +1,22 @@
+
+extends layout/main_layout.pug
+
+
+block content 
+ main
+  #wordcard.container.my-4
+    .row.row-cols-1.row-cols-lg-4.row-cols-md-3.g-4
+      each card in mycard
+       .col
+        .card.mb-3
+          img.card-img-top(src=`/img/${card.image}` alt='')
+          .card
+            h5.card-title 
+                a(href=`/card/${card.id}`) #{card.word}
+            h5.card-title #{card.mean}
+            p.card-text #{card.sentence}
+  
+    
+      
+
+

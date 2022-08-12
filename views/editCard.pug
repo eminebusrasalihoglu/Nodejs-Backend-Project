@@ -1,0 +1,46 @@
+
+extends layout/main_layout.pug
+
+
+block content 
+ main
+  br
+  br
+  br
+  br
+  br
+  .container.w-50
+     form(action="/add" method="POST")
+
+
+        input(type="hidden" name="id" value=`${card.id}`)
+        .form-group.row 
+            label(for="word").col-sm-2.col-form-label Word 
+            .col-sm-10 
+              input.form-control#word(type="text" name="word" value=`${card.word}`)
+        .form-group.row 
+            label(for="mean").col-sm-2.col-form-label Mean 
+            .col-sm-10 
+              input.form-control#mean(type="text" name="mean" value=`${card.mean}`)
+        .form-group.row 
+            label(for="image").col-sm-2.col-form-label Image path 
+            .col-sm-10 
+              input.form-control#image(type="text" name="image" value=`${card.image}`)
+        .form-group.row 
+            label(for="sentence").col-sm-2.col-form-label Sentence
+            .col-sm-10 
+              input.form-control#sentence(type="text" name="sentence" value=`${card.sentence}`)
+        br
+        .form-group.row 
+            .col-sm-10.offset-sm.ml-3.text-center 
+              input(type="submit" value="Save Card").btn.btn-primary
+        br 
+        br 
+        br
+        br
+
+    
+    
+
+
+
